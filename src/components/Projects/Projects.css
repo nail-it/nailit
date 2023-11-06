@@ -1,0 +1,9 @@
+img.project {
+    height: 300px;
+}
+
+div.project {
+    position: relative;
+    z-index: 0;
+}
+

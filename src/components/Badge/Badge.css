@@ -1,0 +1,23 @@
+div.progress {
+    height: 300px;
+    background-color: transparent;
+    width: 300px;
+}
+
+div.progress.done {
+    color: green;
+}
+
+div.progress.inprogress {
+    color: orange;
+}
+
+div.progress svg {
+    display: block;
+}
+
+div.progress span {
+    display: block;
+    font-size: 18px;
+    text-transform: uppercase;
+}
