@@ -9,6 +9,7 @@
   "databases": "Bazy danych",
   "tools": "Narzędzia",
   "repository": "Repozytoria",
+  "check.repository": "Otwórz repozytorium",
   "instant.messengers": "Komunikatory",
   "hardware": "Sprzęt",
   "language": "Language",
@@ -17,5 +18,6 @@
   "contact": "Kontakt",
   "company.address": "ul. Do Wilgi 8/26",
   "telephone": "Telefon",
-  "bank.account": "Rachunek bankowy"
+  "bank.account": "Rachunek bankowy",
+  "homepage": "Strona domowa"
 }

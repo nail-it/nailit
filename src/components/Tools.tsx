@@ -25,7 +25,7 @@ export default function Tools () {
     <ul>
       <li>Azure DevOps</li>
       <li>Bitbucket</li>
-      <li>Github</li>
+      <li>Github - <a href="https://github.com/nail-it">{t('check.repository')}</a></li>
     </ul>
 
     <h5>Interface Design Tool</h5>

@@ -22,7 +22,7 @@ export default function Contact() {
   function displayEmailAddress() {
     return (
       <>
-        {(i18n.language == 'pl') ?
+        {(i18n.language === 'pl') ?
           (<><a href={'mailto:kontakt@nailit.pl'}>kontakt@nailit.pl</a> <CopyButton text='kontakt@nailit.pl'
                                                                                     cb={reactionToCopy}/></>)
           :
@@ -50,15 +50,6 @@ export default function Contact() {
         REGON: 367897141
       </p>
 
-      <h5>{t('telephone')}/e-mail</h5>
-      <p>
-        tel.: <a href={'tel:+48600749237'}>(+48) 600-749-237</a> <CopyButton text='+48600749237'
-                                                                             cb={reactionToCopy}/>
-      </p>
-      <p>
-        {displayEmailAddress()}
-      </p>
-
       <h5>{t('bank.account')}</h5>
 
       <p>
@@ -68,6 +59,19 @@ export default function Contact() {
         69 1870 1045 2078 1018 0382 0002 (EUR) <CopyButton text='69187010452078101803820002'
                                                            cb={reactionToCopy}/><br/>
       </p>
+
+      <h5>{t('telephone')}/e-mail/{t('homepage')}</h5>
+      <p>
+        tel.: <a href={'tel:+48600749237'}>(+48) 600-749-237</a> <CopyButton text='+48600749237'
+                                                                             cb={reactionToCopy}/>
+      </p>
+      <p>
+        {displayEmailAddress()}
+      </p>
+      <p>
+        <a href="https://tomasz.gwozdz.info">https://tomasz.gwozdz.info</a>
+      </p>
+
       <div className="mapIcon d-none d-md-block">
         <svg xmlns="http://www.w3.org/2000/svg" width="500" height="500" fill="currentColor" className="bi bi-map"
              viewBox="0 0 16 16" opacity="0.1" transform="rotate(10 50 100)">
