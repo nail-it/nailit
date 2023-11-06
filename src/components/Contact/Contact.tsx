@@ -22,7 +22,7 @@ export default function Contact() {
   function displayEmailAddress() {
     return (
       <>
-        {(i18n.language == 'pl') ?
+        {(i18n.language === 'pl') ?
           (<><a href={'mailto:kontakt@nailit.pl'}>kontakt@nailit.pl</a> <CopyButton text='kontakt@nailit.pl'
                                                                                     cb={reactionToCopy}/></>)
           :
