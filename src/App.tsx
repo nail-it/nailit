@@ -13,7 +13,7 @@ import Tools from "./components/Tools";
 
 const App: React.FC = () => {
 
-    const [t, i18n] = useTranslation('common');
+    const {t} = useTranslation('common');
 
     const getCurrentDate = () => {
         const timeElapsed = Date.now();
@@ -21,13 +21,9 @@ const App: React.FC = () => {
         return today.getFullYear();
     }
 
-    function languageChange(language: string) {
-        i18n.changeLanguage(language);
-    }
-
     return (
         <Container>
-            <Header language={languageChange}/>
+            <Header />
 
             <div className="position-relative overflow-hidden pt-4 mt-2 p-md-2 m-md-5 text-center">
                 <img src="/logo_nailit_s.png" alt="nail it" className="p-5 pt-5 pb-4"/>

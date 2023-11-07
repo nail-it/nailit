@@ -8,7 +8,7 @@ import 'react-alice-carousel/lib/alice-carousel.css';
 import './Clients.css';
 
 export default function Clients() {
-  const [t] = useTranslation('common');
+  const {t} = useTranslation('common');
 
   const handleDragStart = (e: any) => e.preventDefault();
 

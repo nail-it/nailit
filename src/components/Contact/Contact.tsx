@@ -8,7 +8,7 @@ import {useTranslation} from "react-i18next";
 
 export default function Contact() {
   const [showNotification, setShowNotification] = useState(false);
-  const [t, i18n] = useTranslation('common');
+  const {t, i18n} = useTranslation('common');
 
 
   const reactionToCopy = (data: string) => {

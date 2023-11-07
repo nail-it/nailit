@@ -60,7 +60,7 @@ export default function Projects() {
     <img className="project" alt="img5" src="/projects/evention/5.png" onDragStart={handleDragStart} role="presentation" />,
   ];
 
-  const [t] = useTranslation('common');
+  const {t} = useTranslation('common');
 
   return (<>
     <Container className="p-3 p-sm-5 mb-4 bg-light rounded-4 sectionItem" id="projects">

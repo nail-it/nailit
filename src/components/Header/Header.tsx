@@ -8,10 +8,16 @@ import flagPl from '../../images/pl.png';
 import flagEn from '../../images/en.png';
 import './Header.css';
 
-export default function Header({language}: { language: (language: string) => void; }) {
+export default function Header() {
+
+  function languageChange(language: string) {
+    i18n.changeLanguage(language).then(() => {
+      console.log(i18n.language);
+    });
+  }
 
   const [expanded, setExpanded] = useState(false);
-  const [t, i18n] = useTranslation('common');
+  const {t, i18n} = useTranslation('common');
 
   return (
     <>
@@ -30,17 +36,17 @@ export default function Header({language}: { language: (language: string) => voi
               <NavDropdown title={<div className="float-start pe-1">
                 <img className="thumbnailImage mb-1"
                      alt="language"
-                     src={(i18n.language == 'en') ? flagEn : flagPl}
+                     src={(i18n.language === 'en') ? flagEn : flagPl}
                 />
               </div>} id="basic-nav-dropdown">
                 <NavDropdown.Item onClick={() => {
                   setExpanded(false);
-                  language('en')
+                  languageChange('en')
                 }}>{t('english')}</NavDropdown.Item>
                 <NavDropdown.Divider/>
                 <NavDropdown.Item onClick={() => {
                   setExpanded(false);
-                  language('pl')
+                  languageChange('pl')
                 }}>{t('polish')}</NavDropdown.Item>
               </NavDropdown>
             </Nav>

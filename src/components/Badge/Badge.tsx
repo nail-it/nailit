@@ -4,7 +4,7 @@ import {Progress} from "../../Enums/Progress";
 import {useTranslation} from "react-i18next";
 
 export default function Badge ({progress } : { progress: Progress}) {
-  const [t] = useTranslation('common');
+  const {t} = useTranslation('common');
 
   switch (progress) {
     case Progress.Done:

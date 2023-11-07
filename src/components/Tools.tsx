@@ -4,7 +4,7 @@ import {useTranslation} from "react-i18next";
 
 export default function Tools () {
 
-  const [t] = useTranslation('common');
+  const {t} = useTranslation('common');
 
   return (
     <Container className="p-3 p-sm-5 mb-4 bg-light rounded-4 sectionItem" id="tools">
