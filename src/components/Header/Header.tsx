@@ -12,7 +12,7 @@ export default function Header() {
 
   function languageChange(language: string) {
     i18n.changeLanguage(language).then(() => {
-      console.log(i18n.language);
+
     });
   }
 
@@ -21,30 +21,44 @@ export default function Header() {
 
   return (
     <>
-      <Navbar expand="lg" fixed="top" className="bg-light shadow-sm" expanded={expanded}>
+      <Navbar
+        expand="lg"
+        fixed="top"
+        className="bg-light shadow-sm"
+        expanded={expanded}
+        data-testid="nav-bar"
+      >
         <Container>
           <Navbar.Brand href="#home"></Navbar.Brand>
-          <Navbar.Toggle aria-controls="basic-navbar-nav" className="bg-light"
-                         onClick={() => setExpanded(!expanded)}/>
+          <Navbar.Toggle
+            aria-controls="basic-navbar-nav"
+            className="bg-light"
+            onClick={() => setExpanded(!expanded)}
+            data-testid="nav-toggle"
+          />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="ms-auto">
-              <Nav.Link href="#clients" onClick={() => setExpanded(false)}>{t('clients')}</Nav.Link>
-              <Nav.Link href="#projects" onClick={() => setExpanded(false)}>{t('projects')}</Nav.Link>
-              <Nav.Link href="#technologies" onClick={() => setExpanded(false)}>{t('technologies')}</Nav.Link>
-              <Nav.Link href="#tools" onClick={() => setExpanded(false)}>{t('tools')}</Nav.Link>
-              <Nav.Link href="#contact" onClick={() => setExpanded(false)}>{t('contact')}</Nav.Link>
+              <Nav.Link href="#clients" data-testid="nav-link-clients" onClick={() => setExpanded(false)}>{t('clients')}</Nav.Link>
+              <Nav.Link href="#projects" data-testid="nav-link-projects" onClick={() => setExpanded(false)}>{t('projects')}</Nav.Link>
+              <Nav.Link href="#technologies" data-testid="nav-link-technologies" onClick={() => setExpanded(false)}>{t('technologies')}</Nav.Link>
+              <Nav.Link href="#tools" data-testid="nav-link-tools" onClick={() => setExpanded(false)}>{t('tools')}</Nav.Link>
+              <Nav.Link href="#contact" data-testid="nav-link-contact" onClick={() => setExpanded(false)}>{t('contact')}</Nav.Link>
               <NavDropdown title={<div className="float-start pe-1">
                 <img className="thumbnailImage mb-1"
                      alt="language"
                      src={(i18n.language === 'en') ? flagEn : flagPl}
                 />
-              </div>} id="basic-nav-dropdown">
-                <NavDropdown.Item onClick={() => {
+              </div>} id="basic-nav-dropdown" data-testid="basic-nav-dropdown">
+                <NavDropdown.Item
+                  data-testid="basic-nav-dropdown-en"
+                  onClick={() => {
                   setExpanded(false);
                   languageChange('en')
                 }}>{t('english')}</NavDropdown.Item>
                 <NavDropdown.Divider/>
-                <NavDropdown.Item onClick={() => {
+                <NavDropdown.Item
+                  data-testid="basic-nav-dropdown-pl"
+                  onClick={() => {
                   setExpanded(false);
                   languageChange('pl')
                 }}>{t('polish')}</NavDropdown.Item>

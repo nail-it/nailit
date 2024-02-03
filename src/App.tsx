@@ -15,12 +15,6 @@ const App: React.FC = () => {
 
     const {t} = useTranslation('common');
 
-    const getCurrentDate = () => {
-        const timeElapsed = Date.now();
-        const today = new Date(timeElapsed);
-        return today.getFullYear();
-    }
-
     return (
         <Container>
             <Header />
@@ -52,8 +46,8 @@ const App: React.FC = () => {
 
             <Contact/>
 
-            <p className="text-end p-3">
-                &copy; nail it {getCurrentDate()}
+            <p className="text-end p-3" data-testid="copyright">
+                &copy; nail it { (new Date()).getFullYear() }
             </p>
         </Container>
     );

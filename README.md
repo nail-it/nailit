@@ -1,5 +1,27 @@
 # NAIL IT homepage
 
-A simple homepage based on React-Bootstrap components!
+A simple homepage created from Create React App and based on React-Bootstrap components!
 
-Icons from https://icons.getbootstrap.com/
+# Icons
+https://icons.getbootstrap.com/
+
+# Run
+
+### Localhost
+```
+npm run start
+```
+
+### Production
+
+```
+npm run build
+```
+
+# Tests
+
+Run tests with coverage
+```
+npm run coverage
+```
+

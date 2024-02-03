@@ -12,7 +12,6 @@ export default function Contact() {
 
 
   const reactionToCopy = (data: string) => {
-    console.log(data);
     setShowNotification(true);
     setTimeout(() => {
       setShowNotification(false);
@@ -23,11 +22,9 @@ export default function Contact() {
     return (
       <>
         {(i18n.language === 'pl') ?
-          (<><a href={'mailto:kontakt@nailit.pl'}>kontakt@nailit.pl</a> <CopyButton text='kontakt@nailit.pl'
-                                                                                    cb={reactionToCopy}/></>)
+          (<><a href={'mailto:kontakt@nailit.pl'}>kontakt@nailit.pl</a> <CopyButton text='kontakt@nailit.pl' cb={reactionToCopy} data-testid="copy-button-component" /></>)
           :
-          (<><a href={'mailto:contact@nailit.eu'}>contact@nailit.eu</a> <CopyButton text='contact@nailit.eu'
-                                                                                    cb={reactionToCopy}/></>)
+          (<><a href={'mailto:contact@nailit.eu'}>contact@nailit.eu</a> <CopyButton text='contact@nailit.eu' cb={reactionToCopy}/></>)
         }
       </>
     )

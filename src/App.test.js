@@ -1,9 +1,17 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import App from './App';
+import {render} from "@testing-library/react";
 
-it('renders without crashing', () => {
-  const div = document.createElement('div');
-  ReactDOM.render(<App />, div);
-  ReactDOM.unmountComponentAtNode(div);
+describe('isDateToday', function() {
+
+  it('renders without crashing', () => {
+    const renderedApp = render(<App/>);
+  });
+
+  it('should return company name in footer and year', function () {
+    const renderedApp = render(<App/>);
+    const copyright = renderedApp.getByTestId('copyright');
+    expect(copyright.textContent).toContain('nail it');
+    expect(copyright.textContent).toMatch(/\d{4}/);
+  });
 });
