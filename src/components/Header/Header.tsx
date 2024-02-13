@@ -4,16 +4,27 @@ import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import React, {useState} from "react";
 import {useTranslation} from "react-i18next";
-import flagPl from '../../images/pl.png';
-import flagEn from '../../images/en.png';
+import flagPl from '../../images/pl.svg';
+import flagEn from '../../images/en.svg';
+import flagDe from '../../images/de.svg';
 import './Header.css';
 
 export default function Header() {
 
   function languageChange(language: string) {
     i18n.changeLanguage(language).then(() => {
-
     });
+  }
+
+  function displayFlag() {
+    switch (i18n.language) {
+      case 'en':
+        return flagEn;
+      case 'de':
+        return flagDe;
+      case 'pl':
+        return flagPl;
+    }
   }
 
   const [expanded, setExpanded] = useState(false);
@@ -46,22 +57,26 @@ export default function Header() {
               <NavDropdown title={<div className="float-start pe-1">
                 <img className="thumbnailImage mb-1"
                      alt="language"
-                     src={(i18n.language === 'en') ? flagEn : flagPl}
+                     src={ displayFlag() }
                 />
               </div>} id="basic-nav-dropdown" data-testid="basic-nav-dropdown">
                 <NavDropdown.Item
                   data-testid="basic-nav-dropdown-en"
-                  onClick={() => {
-                  setExpanded(false);
-                  languageChange('en')
-                }}>{t('english')}</NavDropdown.Item>
+                  onClick={ () => { setExpanded(false); languageChange('en'); }}>
+                  {t('english')}
+                </NavDropdown.Item>
                 <NavDropdown.Divider/>
                 <NavDropdown.Item
                   data-testid="basic-nav-dropdown-pl"
-                  onClick={() => {
-                  setExpanded(false);
-                  languageChange('pl')
-                }}>{t('polish')}</NavDropdown.Item>
+                  onClick={ () => { setExpanded(false); languageChange('pl'); }}>
+                  {t('polish')}
+                </NavDropdown.Item>
+                <NavDropdown.Divider/>
+                <NavDropdown.Item
+                  data-testid="basic-nav-dropdown-de"
+                  onClick={ () => { setExpanded(false); languageChange('de'); }}>
+                  {t('deutsch')}
+                </NavDropdown.Item>
               </NavDropdown>
             </Nav>
           </Navbar.Collapse>

@@ -20,6 +20,11 @@ it('it changes language to EN or PL', async () => {
 
   await userEvent.click(plLanguage);
 
+  const deLanguage = within(dropDown).getByTestId('basic-nav-dropdown-de');
+  expect(deLanguage).toBeInTheDocument();
+
+  await userEvent.click(deLanguage);
+
 });
 
 const resizeWindow = (x, y) => {

@@ -51,9 +51,9 @@ export default function Contact() {
 
       <p>
         Nest Bank:<br/>
-        96 1870 1045 2078 1018 0382 0001 (PLN) <CopyButton text='96187010452078101803820001'
+        PL 96 1870 1045 2078 1018 0382 0001 (PLN) <CopyButton text='96187010452078101803820001'
                                                            cb={reactionToCopy}/><br/>
-        69 1870 1045 2078 1018 0382 0002 (EUR) <CopyButton text='69187010452078101803820002'
+        PL 69 1870 1045 2078 1018 0382 0002 (EUR) <CopyButton text='69187010452078101803820002'
                                                            cb={reactionToCopy}/><br/>
       </p>
 

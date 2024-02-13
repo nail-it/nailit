@@ -2,6 +2,10 @@ import Container from "react-bootstrap/Container";
 import React from "react";
 import {useTranslation} from "react-i18next";
 
+import flagPl from '../../images/pl.svg';
+import flagDe from '../../images/de.svg';
+import flagCh from '../../images/ch.svg';
+
 import AliceCarousel from 'react-alice-carousel';
 import 'react-alice-carousel/lib/alice-carousel.css';
 
@@ -13,17 +17,27 @@ export default function Clients() {
   const handleDragStart = (e: any) => e.preventDefault();
 
   const items = [
-    <div className="clients" onDragStart={handleDragStart} >
+    <div className="clients" onDragStart={handleDragStart}>
       <span className="position-absolute top-50 start-50 translate-middle">Bonial International GmbH</span>
+      <span className="text-end">
+        <img className="thumbnailImage float-end mx-3 my-3" alt="language" src={flagDe}/>
+      </span>
     </div>,
-    <div className="clients" onDragStart={handleDragStart} >
+    <div className="clients" onDragStart={handleDragStart}>
       <span className="position-absolute top-50 start-50 translate-middle">Adon Production AG</span>
+      <img className="thumbnailImage float-end mx-3 my-2" alt="language" src={flagCh}/>
     </div>,
-    <div className="clients" onDragStart={handleDragStart} >
+    <div className="clients" onDragStart={handleDragStart}>
       <span className="position-absolute top-50 start-50 translate-middle">Core Logic Sp.&nbsp;z&nbsp;o.o.</span>
+      <img className="thumbnailImage float-end mx-3 my-3" alt="language" src={flagPl}/>
     </div>,
-    <div className="clients" onDragStart={handleDragStart} >
+    <div className="clients" onDragStart={handleDragStart}>
       <span className="position-absolute top-50 start-50 translate-middle">Paradowski Medical Group</span>
+      <img className="thumbnailImage float-end mx-3 my-3" alt="language" src={flagPl}/>
+    </div>,
+    <div className="clients" onDragStart={handleDragStart}>
+      <span className="position-absolute top-50 start-50 translate-middle">NEXCOM GmbH</span>
+      <img className="thumbnailImage float-end mx-3 my-3" alt="language" src={flagDe}/>
     </div>,
   ];
 
