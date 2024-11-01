@@ -50,7 +50,7 @@ export default function Header() {
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="ms-auto">
               <Nav.Link href="#clients" data-testid="nav-link-clients" onClick={() => setExpanded(false)}>{t('clients')}</Nav.Link>
-              <Nav.Link href="#projects" data-testid="nav-link-projects" onClick={() => setExpanded(false)}>{t('projects')}</Nav.Link>
+              {/*<Nav.Link href="#projects" data-testid="nav-link-projects" onClick={() => setExpanded(false)}>{t('projects')}</Nav.Link>*/}
               <Nav.Link href="#technologies" data-testid="nav-link-technologies" onClick={() => setExpanded(false)}>{t('technologies')}</Nav.Link>
               <Nav.Link href="#tools" data-testid="nav-link-tools" onClick={() => setExpanded(false)}>{t('tools')}</Nav.Link>
               <Nav.Link href="#contact" data-testid="nav-link-contact" onClick={() => setExpanded(false)}>{t('contact')}</Nav.Link>

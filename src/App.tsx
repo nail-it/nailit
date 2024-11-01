@@ -26,12 +26,12 @@ const App: React.FC = () => {
                   {t('motto.sub')}
                 </p>
                 <p>
-                    <a href="#projects" className="btn btn-primary mx-3">{t('see.projects')}</a>
+                    {/*<a href="#projects" className="btn btn-primary mx-3">{t('see.projects')}</a>*/}
                     <a href="#contact" className="btn btn-secondary my-2">{t('contact')}</a>
                 </p>
             </div>
 
-            <Projects></Projects>
+            {/*<Projects></Projects>*/}
 
             <div className="row equal">
               <div className="col-12 col-md-6">
