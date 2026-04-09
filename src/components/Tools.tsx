@@ -13,7 +13,14 @@ export default function Tools () {
     <ul>
       <li>WebStorm</li>
       <li>PHPStorm</li>
+      <li>Visual Studio Code</li>
+      <li>Cursor</li>
       <li>DataGrip</li>
+    </ul>
+    <h5>AI</h5>
+    <ul>
+      <li>Claude code</li>
+      <li>Copilot</li>
     </ul>
     <h5>PMS</h5>
     <ul>
