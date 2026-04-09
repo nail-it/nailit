@@ -13,14 +13,11 @@ export default function Technologies() {
       <h2 className="pb-3">{t('technologies')}</h2>
       <h5>Javascript</h5>
       <ul>
-        <li>
-          Vue.js, Vuetify, Vuex, REST API
-        </li>
-        <li>
-          Angular {'>'} 10
-        </li>
-        <li>React, Gatsby</li>
-        <li>jQuery</li>
+        <li>React, MUI</li>
+        <li>Vue.js, Vuetify, Vuex</li>
+        <li>Angular {'>'} 10</li>
+        <li>Node.js, REST API</li>
+        <li>jQuery, Gatsby</li>
       </ul>
 
       <h5>PHP</h5>

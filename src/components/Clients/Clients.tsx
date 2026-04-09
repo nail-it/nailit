@@ -24,11 +24,17 @@ export default function Clients() {
       </span>
     </div>,
     <div className="clients" onDragStart={handleDragStart}>
+      <span className="position-absolute top-50 start-50 translate-middle">Moatable sp.&nbsp;z&nbsp;o.o.</span>
+      <span className="text-end">
+        <img className="thumbnailImage float-end mx-3 my-3" alt="language" src={flagPl}/>
+      </span>
+    </div>,
+    <div className="clients" onDragStart={handleDragStart}>
       <span className="position-absolute top-50 start-50 translate-middle">Adon Production AG</span>
       <img className="thumbnailImage float-end mx-3 my-2" alt="language" src={flagCh}/>
     </div>,
     <div className="clients" onDragStart={handleDragStart}>
-      <span className="position-absolute top-50 start-50 translate-middle">Core Logic Sp.&nbsp;z&nbsp;o.o.</span>
+      <span className="position-absolute top-50 start-50 translate-middle">Core Logic sp.&nbsp;z&nbsp;o.o.</span>
       <img className="thumbnailImage float-end mx-3 my-3" alt="language" src={flagPl}/>
     </div>,
     <div className="clients" onDragStart={handleDragStart}>

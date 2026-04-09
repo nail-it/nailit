@@ -11,7 +11,7 @@ export default function Contact() {
   const {t, i18n} = useTranslation('common');
 
 
-  const reactionToCopy = (data: string) => {
+  const reactionToCopy = () => {
     setShowNotification(true);
     setTimeout(() => {
       setShowNotification(false);
@@ -45,6 +45,8 @@ export default function Contact() {
         NIP: 813 33 78 612 <CopyButton text='8133378612' cb={reactionToCopy}/>
         <br/>
         REGON: 367897141
+        <br />
+        PKD: 62.10.B
       </p>
 
       <h5>{t('bank.account')}</h5>
