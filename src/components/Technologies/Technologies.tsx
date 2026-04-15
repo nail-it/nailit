@@ -14,8 +14,8 @@ export default function Technologies() {
       <h5>Javascript</h5>
       <ul>
         <li>React, MUI</li>
-        <li>Vue.js, Vuetify, Vuex</li>
-        <li>Angular {'>'} 10</li>
+        <li>Vue, Vuetify, Vuex</li>
+        <li>Angular</li>
         <li>Node.js, REST API</li>
         <li>jQuery, Gatsby</li>
       </ul>

@@ -11,16 +11,15 @@ export default function Tools () {
     <h2 className="pb-3">{t('tools')}</h2>
     <h5>IDE</h5>
     <ul>
-      <li>WebStorm</li>
-      <li>PHPStorm</li>
-      <li>Visual Studio Code</li>
-      <li>Cursor</li>
+      <li>WebStorm, PHPStorm</li>
+      <li>Visual Studio Code, Cursor</li>
       <li>DataGrip</li>
     </ul>
     <h5>AI</h5>
     <ul>
       <li>Claude code</li>
       <li>Copilot</li>
+      <li>Ollama, Opencode</li>
     </ul>
     <h5>PMS</h5>
     <ul>
