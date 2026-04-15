@@ -22,11 +22,11 @@ export default function Projects() {
   };
 
   const itemsPodyplomoweStudia = [
-    <Badge progress={Progress.Done}></Badge>,
     <img className="project" alt="img1" src="/projects/podyplomowestudia/1.png" onDragStart={handleDragStart} role="presentation" />,
     <img className="project" alt="img2" src="/projects/podyplomowestudia/2.png" onDragStart={handleDragStart} role="presentation" />,
     <img className="project" alt="img3" src="/projects/podyplomowestudia/3.png" onDragStart={handleDragStart} role="presentation" />,
     <img className="project" alt="img4" src="/projects/podyplomowestudia/4.png" onDragStart={handleDragStart} role="presentation" />,
+    <Badge progress={Progress.Done}></Badge>,
   ];
 
   const itemsUnikadra = [
@@ -34,30 +34,30 @@ export default function Projects() {
     <img className="project" alt="img2" src="/projects/unikadra/2.png" onDragStart={handleDragStart} role="presentation" />,
     <img className="project" alt="img3" src="/projects/unikadra/3.png" onDragStart={handleDragStart} role="presentation" />,
     <img className="project" alt="img4" src="/projects/unikadra/4.png" onDragStart={handleDragStart} role="presentation" />,
-    <Badge progress={Progress.InProgress}></Badge>,
+    <Badge progress={Progress.Done}></Badge>,
   ];
 
-  const itemsSportMed = [
-    <Badge progress={Progress.Done}></Badge>,
-    <img className="project" alt="img1" src="/projects/sportmed/1.png" onDragStart={handleDragStart} role="presentation" />,
-    <img className="project" alt="img2" src="/projects/sportmed/2.png" onDragStart={handleDragStart} role="presentation" />,
-    <img className="project" alt="img3" src="/projects/sportmed/3.png" onDragStart={handleDragStart} role="presentation" />,
-  ];
-
-  const itemsKucharski = [
-    <Badge progress={Progress.Done}></Badge>,
-    <img className="project" alt="img1" src="/projects/kucharski/1.png" onDragStart={handleDragStart} role="presentation" />,
-    <img className="project" alt="img2" src="/projects/kucharski/2.png" onDragStart={handleDragStart} role="presentation" />,
-    <img className="project" alt="img3" src="/projects/kucharski/3.png" onDragStart={handleDragStart} role="presentation" />,
-  ];
+  // const itemsSportMed = [
+  //   <Badge progress={Progress.Done}></Badge>,
+  //   <img className="project" alt="img1" src="/projects/sportmed/1.png" onDragStart={handleDragStart} role="presentation" />,
+  //   <img className="project" alt="img2" src="/projects/sportmed/2.png" onDragStart={handleDragStart} role="presentation" />,
+  //   <img className="project" alt="img3" src="/projects/sportmed/3.png" onDragStart={handleDragStart} role="presentation" />,
+  // ];
+  //
+  // const itemsKucharski = [
+  //   <Badge progress={Progress.Done}></Badge>,
+  //   <img className="project" alt="img1" src="/projects/kucharski/1.png" onDragStart={handleDragStart} role="presentation" />,
+  //   <img className="project" alt="img2" src="/projects/kucharski/2.png" onDragStart={handleDragStart} role="presentation" />,
+  //   <img className="project" alt="img3" src="/projects/kucharski/3.png" onDragStart={handleDragStart} role="presentation" />,
+  // ];
 
   const itemsEvention = [
-    <Badge progress={Progress.Done}></Badge>,
     <img className="project" alt="img1" src="/projects/evention/1.png" onDragStart={handleDragStart} role="presentation" />,
     <img className="project" alt="img2" src="/projects/evention/2.png" onDragStart={handleDragStart} role="presentation" />,
     <img className="project" alt="img3" src="/projects/evention/3.png" onDragStart={handleDragStart} role="presentation" />,
     <img className="project" alt="img4" src="/projects/evention/4.png" onDragStart={handleDragStart} role="presentation" />,
     <img className="project" alt="img5" src="/projects/evention/5.png" onDragStart={handleDragStart} role="presentation" />,
+    <Badge progress={Progress.Done}></Badge>,
   ];
 
   const {t} = useTranslation('common');
@@ -98,25 +98,25 @@ export default function Projects() {
         disableButtonsControls
       />
 
-      <h5>Sport-med</h5>
-      <AliceCarousel
-        mouseTracking
-        responsive={responsive}
-        controlsStrategy="alternate"
-        items={itemsSportMed}
-        infinite
-        disableButtonsControls
-      />
+      {/*<h5>Sport-med</h5>*/}
+      {/*<AliceCarousel*/}
+      {/*  mouseTracking*/}
+      {/*  responsive={responsive}*/}
+      {/*  controlsStrategy="alternate"*/}
+      {/*  items={itemsSportMed}*/}
+      {/*  infinite*/}
+      {/*  disableButtonsControls*/}
+      {/*/>*/}
 
-      <h5>Radca Prawny Rafał Kucharski</h5>
-      <AliceCarousel
-        mouseTracking
-        responsive={responsive}
-        controlsStrategy="alternate"
-        items={itemsKucharski}
-        infinite
-        disableButtonsControls
-      />
+      {/*<h5>Radca Prawny Rafał Kucharski</h5>*/}
+      {/*<AliceCarousel*/}
+      {/*  mouseTracking*/}
+      {/*  responsive={responsive}*/}
+      {/*  controlsStrategy="alternate"*/}
+      {/*  items={itemsKucharski}*/}
+      {/*  infinite*/}
+      {/*  disableButtonsControls*/}
+      {/*/>*/}
 
     </Container>
   </>);
