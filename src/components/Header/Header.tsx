@@ -13,6 +13,8 @@ export default function Header() {
 
   function languageChange(language: string) {
     i18n.changeLanguage(language).then(() => {
+      const newUrl = window.location.pathname.replace(/^\/[a-z]{2}/, `/${language}`) || `/${language}`;
+      window.history.replaceState({}, '', newUrl);
     });
   }
 
@@ -56,8 +58,8 @@ export default function Header() {
               <Nav.Link href="#contact" data-testid="nav-link-contact" onClick={() => setExpanded(false)}>{t('contact')}</Nav.Link>
               <NavDropdown title={<div className="float-start pe-1">
                 <img className="thumbnailImage mb-1"
-                     alt="language"
-                     src={ displayFlag() }
+                      alt="language"
+                      src={ displayFlag() }
                 />
               </div>} id="basic-nav-dropdown" data-testid="basic-nav-dropdown">
                 <NavDropdown.Item

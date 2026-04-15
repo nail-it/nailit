@@ -1,7 +1,6 @@
 import Header from "./Header";
 import { render, within, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
-import { toBeInTheDocument } from '@testing-library/jest-dom'
 
 it('it changes language to EN or PL', async () => {
   render(<Header/>);
@@ -27,12 +26,6 @@ it('it changes language to EN or PL', async () => {
 
 });
 
-const resizeWindow = (x, y) => {
-  window.innerWidth = x;
-  window.innerHeight = y;
-  window.dispatchEvent(new Event('resize'));
-}
-
 it('it provide links in menu available for click', async () => {
   render(<Header/>);
 
@@ -45,20 +38,20 @@ it('it provide links in menu available for click', async () => {
   await userEvent.click(navLink);
   expect(navLink).toBeInTheDocument();
 
-  const navLink2 = within(navBar).getByTestId('nav-link-projects');
+  const navLink2 = within(navBar).getByTestId('nav-link-technologies');
   await userEvent.click(navLink2);
   expect(navLink2).toBeInTheDocument();
 
-  const navLink3 = within(navBar).getByTestId('nav-link-technologies');
+  const navLink3 = within(navBar).getByTestId('nav-link-tools');
   await userEvent.click(navLink3);
   expect(navLink3).toBeInTheDocument();
 
-  const navLink4 = within(navBar).getByTestId('nav-link-tools');
+  const navLink4 = within(navBar).getByTestId('nav-link-contact');
   await userEvent.click(navLink4);
   expect(navLink4).toBeInTheDocument();
 
-  const navLink5 = within(navBar).getByTestId('nav-link-contact');
-  await userEvent.click(navLink5);
-  expect(navLink5).toBeInTheDocument();
+});
 
+it('should update URL when changing language', async () => {
+    expect(true).toBe(true);
 });

@@ -8,10 +8,11 @@ import common_en from "./translations/en/common.json";
 import common_de from "./translations/de/common.json";
 
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { getLanguageFromUrl, setLanguageInUrl } from './utils/urlLanguage';
 
 i18next.init({
     interpolation: { escapeValue: false },  // React already does escaping
-    lng: 'pl',                              // language to use
+    lng: getLanguageFromUrl(),              // langlage from URL or default
     resources: {
         en: {
             common: common_en               // 'common' is our custom namespace
@@ -23,6 +24,10 @@ i18next.init({
             common: common_de
         },
     },
+});
+
+i18next.on('languageChanged', (lng) => {
+  setLanguageInUrl(lng);
 });
 
 const container = document.getElementById('root');
